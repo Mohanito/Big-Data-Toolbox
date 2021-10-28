@@ -1,0 +1,3 @@
+https://hub.docker.com/r/bitnami/spark
+
+docker-compose up --scale spark-worker=3

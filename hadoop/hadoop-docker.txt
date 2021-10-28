@@ -1,0 +1,3 @@
+https://hub.docker.com/r/sequenceiq/hadoop-docker
+
+docker run -it sequenceiq/hadoop-docker:latest /etc/bootstrap.sh -bash
