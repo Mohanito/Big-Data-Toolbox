@@ -7,5 +7,7 @@ print("4. SonarQube and SonarScanner")
 
 while True:
     print("\nType the number here > ")
-    appid = input()
-    print(appid)
+    while True:
+        pass
+    # appid = input()
+    # print(appid)
