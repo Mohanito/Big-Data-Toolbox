@@ -9,7 +9,7 @@ Hadoop: https://hub.docker.com/r/sequenceiq/hadoop-docker \
 Spark: https://hub.docker.com/r/bitnami/spark \
 Jupyter Notebook: https://hub.docker.com/r/jupyter/base-notebook \
 Sonarqube: https://hub.docker.com/_/sonarqube \
-SonarScanner: https://hub.docker.com/r/sonarsource/sonar-scanner-cli \
+SonarScanner: https://hub.docker.com/r/sonarsource/sonar-scanner-cli
 
 ### Running Docker images on (local) Kubernetes Engine
 1. Install kubernetes and minikube
@@ -21,7 +21,10 @@ SonarScanner: https://hub.docker.com/r/sonarsource/sonar-scanner-cli \
         `kubectl expose deployment big-data-toolbox --type=NodePort --port=8080`
 5. Run `kubectl get pods` to check deployment status. 
 
-For checkpoint 1, **screenshot.png** shows the container running on Kubernetes locally.
+Then, use similar commands to run the other docker container images. \
+
+For checkpoint 1, **screenshot_toolbox.png** shows the main container running on Kubernetes locally. \
+**screenshot_containers.png** shows all 5 containers running on Kubernetes locally without any error.
 
 #### References:
 https://minikube.sigs.k8s.io/docs/handbook/controls/
