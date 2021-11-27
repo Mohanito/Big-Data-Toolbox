@@ -1,3 +1,8 @@
+Container Link:
 https://hub.docker.com/r/bitnami/spark
 
+External endpoint:
+http://35.224.111.226:8080
+
+Run locally:
 docker-compose up --scale spark-worker=3

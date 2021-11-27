@@ -18,8 +18,9 @@ SonarScanner: https://hub.docker.com/r/sonarsource/sonar-scanner-cli
 
 In Container Registry, go to the image and "Deploy to GKE".
 
-## External Endpoints
-Jupyter Notebook: 34.123.215.223:8888
+## External Endpoints for Kubernetes Services
+Jupyter Notebook: http://34.123.215.223:8888
+Spark: http://35.224.111.226:8080
 
 ## Running Docker images on (local) Kubernetes Engine
 1. Install kubernetes and minikube

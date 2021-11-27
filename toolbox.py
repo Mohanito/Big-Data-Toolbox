@@ -9,6 +9,9 @@ while True:
     print("4. SonarQube and SonarScanner")
     print("\nType the number here > ")
     appid = input()
+    if appid == 2:
+        print("Opening Apache Spark in web browser...\n")
+        webbrowser.open("http://35.224.111.226:8080", new = 0, autoraise = True)
     if appid == 3:
         print("Opening Jupyter Notebook in web browser...\n")
         webbrowser.open("http://34.123.215.223:8888", new = 0, autoraise = True)
