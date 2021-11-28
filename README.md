@@ -5,7 +5,8 @@ A microservice-based application that allows users to run Apache Hadoop, Spark, 
 https://hub.docker.com/r/mohanito/big-data-toolbox
 
 ## Docker Images
-Hadoop: https://hub.docker.com/r/sequenceiq/hadoop-docker \
+Hadoop Namenode: https://hub.docker.com/r/bde2020/hadoop-namenode \
+Hadoop Datanode: https://hub.docker.com/r/bde2020/hadoop-datanode \
 Spark: https://hub.docker.com/r/bitnami/spark \
 Jupyter Notebook: https://hub.docker.com/r/jupyter/base-notebook \
 Sonarqube (with SonarScanner installed): https://hub.docker.com/r/mohanito/sonar 
@@ -30,20 +31,20 @@ Build an image with a Dockerfile containing:
     RUN echo "export PATH=$PATH:/opt/sonarqube/sonar-scanner-4.0.0.1744/bin" >> /root/.bashrc
 Reference: https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/ 
 
-## Running Docker images on (local) Kubernetes Engine
-1. Install kubernetes and minikube
-2. start a cluster by doing:
-        `minikube start`
-3. Start a server:
-        `kubectl create deployment big-data-toolbox --image=mohanito/big-data-toolbox`
-4. Expose a service as a NodePort:
-        `kubectl expose deployment big-data-toolbox --type=NodePort --port=8080`
-5. Run `kubectl get pods` to check deployment status. 
+## Environment Variables for Deploying Hadoop on GKE
+```
+CLUSTER_NAME=test
 
-Then, use similar commands to run the other docker container images. \
+CORE_CONF_fs_defaultFS=hdfs://namenode:9000
+CORE_CONF_hadoop_http_staticuser_user=root
+CORE_CONF_hadoop_proxyuser_hue_hosts=*
+CORE_CONF_hadoop_proxyuser_hue_groups=*
+CORE_CONF_io_compression_codecs=org.apache.hadoop.io.compress.SnappyCodec
 
-For checkpoint 1, **screenshot_toolbox.png** shows the main container running on Kubernetes locally. \
-**screenshot_containers.png** shows all 5 containers running on Kubernetes locally without any error.
+HDFS_CONF_dfs_webhdfs_enabled=true
+HDFS_CONF_dfs_permissions_enabled=false
+HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check=false
+```
 
 ### References:
 https://minikube.sigs.k8s.io/docs/handbook/controls/

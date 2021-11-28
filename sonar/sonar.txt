@@ -1,4 +1,4 @@
-Container Link (Sonarqube with SonarScanner installed):
+Link to Image (Sonarqube with SonarScanner installed):
 https://hub.docker.com/r/mohanito/sonar 
 
 External Endpoint: http://34.74.74.68:9000

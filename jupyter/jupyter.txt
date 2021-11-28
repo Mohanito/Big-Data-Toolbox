@@ -1,4 +1,4 @@
-Container Link:
+Link to Image:
 https://hub.docker.com/r/jupyter/base-notebook
 
 External Endpoint:
