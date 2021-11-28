@@ -21,7 +21,8 @@ In Container Registry, go to the image and "Deploy to GKE".
 ## External Endpoints for Kubernetes Services
 Jupyter Notebook: http://34.123.215.223:8888 \
 Spark: http://35.224.111.226:8080 \
-Sonarqube: http://34.74.74.68:9000
+Sonarqube: http://34.74.74.68:9000 \
+Hadoop: http://34.85.228.99:9870/
 
 ## Installing SonarScanner in the official SonarQube image
 Build an image with a Dockerfile containing:
