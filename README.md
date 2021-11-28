@@ -18,16 +18,18 @@ Sonarqube (with SonarScanner installed): https://hub.docker.com/r/mohanito/sonar
 In Container Registry, go to the image and "Deploy to GKE".
 
 ## External Endpoints for Kubernetes Services
-Jupyter Notebook: http://34.123.215.223:8888
-Spark: http://35.224.111.226:8080
+Jupyter Notebook: http://34.123.215.223:8888 \
+Spark: http://35.224.111.226:8080 \
 Sonarqube: http://34.74.74.68:9000
 
 ## Installing SonarScanner in the official SonarQube image
 Build an image with a Dockerfile containing:
-    RUN wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.0.0.1744.zip && \
-    unzip sonar-scanner-cli-4.0.0.1744.zip
-    ENV PATH $PATH:/opt/sonarqube/sonar-scanner-4.0.0.1744/bin
-    RUN echo "export PATH=$PATH:/opt/sonarqube/sonar-scanner-4.0.0.1744/bin" >> /root/.bashrc
+```
+RUN wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.0.0.1744.zip && \
+unzip sonar-scanner-cli-4.0.0.1744.zip
+ENV PATH $PATH:/opt/sonarqube/sonar-scanner-4.0.0.1744/bin
+RUN echo "export PATH=$PATH:/opt/sonarqube/sonar-scanner-4.0.0.1744/bin" >> /root/.bashrc
+```
 Reference: https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/ 
 
 ## Running Docker images on (local) Kubernetes Engine
