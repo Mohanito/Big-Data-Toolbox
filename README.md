@@ -21,7 +21,8 @@ The project is deployed on Kubernetes Engine on Google Cloud Platform. You may v
 | hadoop   | Link to Docker images and environment variables used for deploying Hadoop |
 | jupyter   | Link to the Docker image used for deploying Jupyter Notebook  |
 | screenshots | Screenshots of GCP Kubernetes Engine and exposed services |
-| sonar   | Link to the Docker image used for deploying Spark |
+| sonar | Dockerfile used to build a custom image of SonarQube with SonarScanner installed |
+| spark   | Link to the Docker image used for deploying Spark |
 | Dockerfile   | Dockerfile used for building the node.js based user interface |
 | index.html   | Main webpage for the user interface |
 | server.js   | An express.js server for the user interface |
