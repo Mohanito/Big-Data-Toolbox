@@ -37,7 +37,7 @@ Reference: https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/
 
 ## Environment Variables for Deploying Hadoop on GKE
 ```
-CLUSTER_NAME=test (not for datanodes!)
+CLUSTER_NAME=test (for namenode only)
 
 CORE_CONF_fs_defaultFS=hdfs://namenode:9000
 CORE_CONF_hadoop_http_staticuser_user=root
@@ -52,10 +52,4 @@ HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check=false
 https://github.com/big-data-europe/docker-hadoop/blob/master/hadoop.env \
 https://github.com/big-data-europe/docker-hadoop/blob/master/docker-compose.yml \
 The Hadoop namenode should be exposed to port 9870 and 9000. \
-For the datanode, set SERVICE_PRECONDITION as hadoop-namenode-service:9000, and CORE_CONF_fs_defaultFS as hdfs://hadoop-namenode-service:9000
-
-
-valueFrom:
-            configMapKeyRef:
-              key: HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check
-              name: hadoop-datanode-config-0arc
+For the datanode, set SERVICE_PRECONDITION as hadoop-namenode-service:9000, and CORE_CONF_fs_defaultFS as hdfs://hadoop-namenode-service:9000. In this project, it is hardcoded as 34.85.228.99:9000.
