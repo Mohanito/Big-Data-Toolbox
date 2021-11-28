@@ -31,6 +31,7 @@ unzip sonar-scanner-cli-4.0.0.1744.zip
 ENV PATH $PATH:/opt/sonarqube/sonar-scanner-4.0.0.1744/bin
 RUN echo "export PATH=$PATH:/opt/sonarqube/sonar-scanner-4.0.0.1744/bin" >> /root/.bashrc
 ```
+This downloads SonarScanner, unzips the file, and adds the directory to the PATH environment variable. \
 Reference: https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/ 
 
 ## Environment Variables for Deploying Hadoop on GKE
@@ -47,6 +48,6 @@ HDFS_CONF_dfs_webhdfs_enabled=true
 HDFS_CONF_dfs_permissions_enabled=false
 HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check=false
 ```
-
-### References:
-https://minikube.sigs.k8s.io/docs/handbook/controls/
+https://github.com/big-data-europe/docker-hadoop/blob/master/hadoop.env \
+The Hadoop namenode should be exposed to port 9870 and 9000. \
+For the datanode, set SERVICE_PRECONDITION as hadoop-namenode-service:9000, and CORE_CONF_fs_defaultFS as hdfs://hadoop-namenode-service:9000
