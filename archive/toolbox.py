@@ -1,7 +1,7 @@
 import webbrowser
 
 while True:
-    print("Welcome to Big data Processing Application")
+    print("Welcome to Big Data Processing Application")
     print("Please type the number that corresponds to which application you would like to run:")
     print("1. Apache Hadoop")
     print("2. Apache Spark")

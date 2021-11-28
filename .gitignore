@@ -1,2 +1,3 @@
 .DS_Store
 minikube-darwin-amd64
+node_modules
