@@ -15,3 +15,6 @@ while True:
     if appid == 3:
         print("Opening Jupyter Notebook in web browser...\n")
         webbrowser.open("http://34.123.215.223:8888", new = 0, autoraise = True)
+    if appid == 4:
+        print("Opening SonarQube in web browser...\n")
+        webbrowser.open("http://34.74.74.68:9000", new = 0, autoraise = True)

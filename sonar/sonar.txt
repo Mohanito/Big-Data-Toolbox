@@ -1,6 +1,6 @@
-Sonarqube: https://hub.docker.com/_/sonarqube 
+Container Link (Sonarqube with SonarScanner installed):
+https://hub.docker.com/r/mohanito/sonar 
 
-To run Sonarqube: docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest
-Then go to http://localhost:9000
+External Endpoint: http://34.74.74.68:9000
 
-SonarScanner: https://hub.docker.com/r/sonarsource/sonar-scanner-cli
+Original Sonarqube Image: https://hub.docker.com/_/sonarqube
