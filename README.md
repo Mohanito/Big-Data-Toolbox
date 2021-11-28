@@ -78,3 +78,17 @@ https://github.com/big-data-europe/docker-hadoop/blob/master/hadoop.env \
 https://github.com/big-data-europe/docker-hadoop/blob/master/docker-compose.yml \
 The Hadoop namenode should be exposed to port 9870 and 9000. \
 For the datanode, set SERVICE_PRECONDITION as hadoop-namenode-service:9000, and CORE_CONF_fs_defaultFS as hdfs://hadoop-namenode-service:9000. In this project, it is hardcoded as 34.85.228.99:9000 (namenode endpoint).
+
+## Preview
+#### Graphical User Interface
+![GUI Image](https://github.com/Mohanito/Big-Data-Toolbox/blob/main/screenshots/User_interface.png)
+#### Hadoop
+![Hadoop Image](https://github.com/Mohanito/Big-Data-Toolbox/blob/main/screenshots/Hadoop_datanode.png)
+#### Spark
+![Spark Image](https://github.com/Mohanito/Big-Data-Toolbox/blob/main/screenshots/Spark.png)
+#### Jupyter Notebook
+![Jupyter Image](https://github.com/Mohanito/Big-Data-Toolbox/blob/main/screenshots/Jupyter_notebook.png)
+#### SonarQube with SonarScanner
+![Sonar Image](https://github.com/Mohanito/Big-Data-Toolbox/blob/main/screenshots/SonarQube.png)
+#### Kubernetes Engine Workloads
+![GKE Image](https://github.com/Mohanito/Big-Data-Toolbox/blob/main/screenshots/GKE_workloads.png)
