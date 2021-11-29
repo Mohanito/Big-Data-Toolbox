@@ -9,7 +9,7 @@
 </p>
 
 ## Video Code Walkthrough & Demo
-https://www.youtube.com/watch?v=dQw4w9WgXcQ
+https://cmu.box.com/s/pfc8jdz86unpm12ixead72qvq0x0j1wf
 
 ## Usage
 The project is deployed on Kubernetes Engine on Google Cloud Platform. You may visit the service endpoint at http://34.74.245.70:3000.
